@@ -30,6 +30,7 @@ class Preprocess():
         This function is used for clean raw strings
         """
         text = re.sub(r'http://\S+.\S+', '', self.input_str)
+        text = re.sub(r'@[\S]*', '', text)
         text = text.lower()
         return text
 
