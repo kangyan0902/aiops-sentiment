@@ -6,7 +6,6 @@ import re
 import csv
 import pandas as pd
 from nltk import tokenize
-import artifacts
 
 class Preprocess():
     """
@@ -38,7 +37,7 @@ class Preprocess():
         """
         This function is used for tokenizing text
 	    """
-        tknzr = tokenize.TweetTokenizer(artifacts, reduce_len=True)
+        tknzr = tokenize.TweetTokenizer(reduce_len=True)
         return tknzr.tokenize(self.cleantext)
 
     def replace_token_with_index(self, str_):
